@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CicekSepetiCart.Domain", "CicekSepetiCart.Domain\CicekSepetiCart.Domain.csproj", "{D6405A0C-32D0-4A6A-AD62-CAD5D5CBFD73}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CicekSepetiCart.Application", "CicekSepetiCart.Application\CicekSepetiCart.Application.csproj", "{3ACA46F0-E51C-41BC-87A4-919B44859FED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CicekSepetiCart.Infrastructure", "CicekSepetiCart.Infrastructure\CicekSepetiCart.Infrastructure.csproj", "{96B9CB32-27C5-4AFC-A27D-D42FCBFA609D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CicekSepetiCart.Test", "CicekSepetiCart.Test", "{12A1B0E8-7138-4C15-8154-1FB54A4CADEB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CicekSepetiCart.Test", "CicekSepetiCart.Test\CicekSepetiCart.Test.csproj", "{5F868B65-3DDB-4C92-8CB9-4543F3DA75ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CicekSepetiCart.API", "CicekSepetiCart.API\CicekSepetiCart.API.csproj", "{1BECA9A9-0DDE-4052-ACE1-66AC3F6FCA27}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlInit", "SqlInit", "{B03EDCBD-86F8-4EDF-BCB2-22342678285E}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\enesm\Desktop\netcore-boilerplate-master\db\mssql\db-init.sql = C:\Users\enesm\Desktop\netcore-boilerplate-master\db\mssql\db-init.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6405A0C-32D0-4A6A-AD62-CAD5D5CBFD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6405A0C-32D0-4A6A-AD62-CAD5D5CBFD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6405A0C-32D0-4A6A-AD62-CAD5D5CBFD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6405A0C-32D0-4A6A-AD62-CAD5D5CBFD73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ACA46F0-E51C-41BC-87A4-919B44859FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ACA46F0-E51C-41BC-87A4-919B44859FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ACA46F0-E51C-41BC-87A4-919B44859FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ACA46F0-E51C-41BC-87A4-919B44859FED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96B9CB32-27C5-4AFC-A27D-D42FCBFA609D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96B9CB32-27C5-4AFC-A27D-D42FCBFA609D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96B9CB32-27C5-4AFC-A27D-D42FCBFA609D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96B9CB32-27C5-4AFC-A27D-D42FCBFA609D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F868B65-3DDB-4C92-8CB9-4543F3DA75ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F868B65-3DDB-4C92-8CB9-4543F3DA75ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F868B65-3DDB-4C92-8CB9-4543F3DA75ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F868B65-3DDB-4C92-8CB9-4543F3DA75ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BECA9A9-0DDE-4052-ACE1-66AC3F6FCA27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BECA9A9-0DDE-4052-ACE1-66AC3F6FCA27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BECA9A9-0DDE-4052-ACE1-66AC3F6FCA27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BECA9A9-0DDE-4052-ACE1-66AC3F6FCA27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5F868B65-3DDB-4C92-8CB9-4543F3DA75ED} = {12A1B0E8-7138-4C15-8154-1FB54A4CADEB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E89617C3-E587-44F9-9C4E-0058852C5373}
+	EndGlobalSection
+EndGlobal
