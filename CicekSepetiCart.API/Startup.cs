@@ -13,6 +13,8 @@ using CicekSepetiCart.Application.Services;
 using CicekSepetiCart.Domain.Repositories;
 using CicekSepetiCart.Infrastructure.Repositories;
 using System.Linq;
+using CicekSepetiCart.Domain.Providers;
+using CicekSepetiCart.Infrastructure.Providers;
 
 namespace CicekSepetiCart.API
 {
@@ -33,6 +35,8 @@ namespace CicekSepetiCart.API
             services.AddScoped<ICartDbContext, CartDbContext>();
             services.AddScoped<ICartService,CartService>();
             services.AddScoped<ICartRepository, CartRepository>();
+            services.AddScoped<IProductProvider, ProductProvider>();
+            services.AddScoped<IStockProvider, StockProvider>();
             services.AddAutoMapper(typeof(Startup));
             services.AddSwaggerGen(c =>
             {

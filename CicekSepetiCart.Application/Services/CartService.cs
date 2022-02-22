@@ -4,6 +4,7 @@ using CicekSepetiCart.Application.Models;
 using CicekSepetiCart.Application.Models.Enums;
 using CicekSepetiCart.Application.Validation;
 using CicekSepetiCart.Domain.Entities;
+using CicekSepetiCart.Domain.Providers;
 using CicekSepetiCart.Domain.Repositories;
 using System;
 using System.Collections.Generic;
@@ -14,15 +15,27 @@ namespace CicekSepetiCart.Application.Services
     public class CartService : ICartService
     {
         private readonly ICartRepository _cartRepository;
+        private readonly IProductProvider _productProvider;
+        private readonly IStockProvider _stockProvider;
 
-        public CartService(ICartRepository cartRepository)
+        public CartService(
+            ICartRepository cartRepository, 
+            IProductProvider productProvider, 
+            IStockProvider stockProvider)
         {
             _cartRepository = cartRepository;
+            _productProvider = productProvider;
+            _stockProvider = stockProvider;
         }
 
         public async Task<CartItemModel> AddCartItem(CartItemModel model)
         {
             CartServiceValidation.IsNotValidModel(model);
+
+            var productExists = await _productProvider.CheckIfProductExists(model.ProductId);
+
+            if (!productExists)
+                throw new ApplicationException("Product not found.");
 
             var mapped = ObjectMapper.Mapper.Map<CartItem>(model);
             if (mapped == null)
@@ -42,7 +55,11 @@ namespace CicekSepetiCart.Application.Services
                 if (existItem != null)
                     finalizeQuantity += existItem.Quantity;
 
-                // TODO:check stock
+                var isEnoughStock = await _stockProvider.CheckIfEnoughStock(mapped.ProductId, finalizeQuantity);
+
+                if (!isEnoughStock)
+                    throw new ApplicationException("There is not enough stock.");
+
                 if (existItem != null)
                 {
                     existItem.Quantity = finalizeQuantity;
