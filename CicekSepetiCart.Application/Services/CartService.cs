@@ -64,6 +64,7 @@ namespace CicekSepetiCart.Application.Services
                 {
                     existItem.Quantity = finalizeQuantity;
                     existItem.ModifiedAt = DateTime.Now;
+                    mapped.Id = existItem.Id;
                     await _cartRepository.UpdateAsync(existItem);
                 }
                 else

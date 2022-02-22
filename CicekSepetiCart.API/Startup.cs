@@ -30,7 +30,7 @@ namespace CicekSepetiCart.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CartDbContext>(options => options.UseSqlServer("Data Source=.;Database=CicekSepetiCartTest;Integrated Security=True"));
+            services.AddDbContext<CartDbContext>(options => options.UseSqlServer("Data Source=.;Database=CicekSepetiCart;Integrated Security=True"));
 
             services.AddScoped<ICartDbContext, CartDbContext>();
             services.AddScoped<ICartService,CartService>();
